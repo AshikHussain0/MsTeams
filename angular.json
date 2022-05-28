@@ -30,7 +30,7 @@
               "src/styles.css"
 
             ],
-            "scripts": ["https://kit.fontawesome.com/25371e7933.js"]
+            "scripts": []
           },
           "configurations": {
             "production": {

@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Component, NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
@@ -7,7 +7,12 @@ import { TopbarComponent } from './topbar/topbar.component';
 import { Sidebar1Component } from './sidebar1/sidebar1.component';
 import { Sidebar2Component } from './sidebar2/sidebar2.component';
 import { MainsectionComponent } from './mainsection/mainsection.component';
-import { RouterModule } from '@angular/router';
+import { RouterModule, Routes } from '@angular/router';
+import { ChatComponent } from './chat/chat.component';
+import { ActivityComponent } from './activity/activity.component';
+import { TeamsComponent } from './teams/teams.component';
+
+// const route:Routes=[{path:'chat', component: ChatComponent}]
 
 @NgModule({
   declarations: [
@@ -15,12 +20,19 @@ import { RouterModule } from '@angular/router';
     TopbarComponent,
     Sidebar1Component,
     Sidebar2Component,
-    MainsectionComponent
+    MainsectionComponent,
+    ChatComponent,
+    ActivityComponent,
+    TeamsComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    RouterModule
+    RouterModule.forRoot([{path:'chat', component: ChatComponent},
+    {path:'activity', component: ActivityComponent},
+    {path:'teams', component: TeamsComponent}]),
+
+
   ],
   providers: [],
   bootstrap: [AppComponent]
